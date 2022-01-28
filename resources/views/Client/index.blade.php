@@ -1,19 +1,19 @@
-<x-client.head />
+<x-Client.head />
 
 <body>
-    <x-client.preloader />
+    <x-Client.preloader />
     <header>
-        <x-client.nav />
+        <x-Client.nav />
     </header>
     <main>
-        <x-client.hero />
-        <x-client.result />
-        <x-client.features />
+        <x-Client.hero />
+        <x-Client.result />
+        <x-Client.features />
         </div>
-        <x-client.faq />
-        <x-client.ready />
-        <x-client.help />
+        <x-Client.faq />
+        <x-Client.ready />
+        <x-Client.help />
     </main>
-    <x-client.footer />
-    <x-client.btt />
-    <x-client.script />
+    <x-Client.footer />
+    <x-Client.btt />
+    <x-Client.script />

@@ -25,5 +25,7 @@
 	<link rel="stylesheet" href="{{asset('assets/css/slick.css')}}">
 	<link rel="stylesheet" href="{{asset('assets/css/nice-select.css')}}">
     <link rel="stylesheet" href="{{asset('assets/css/style.css')}}">
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.4/css/jquery.dataTables.css">
+
     @livewireStyles
 </head>

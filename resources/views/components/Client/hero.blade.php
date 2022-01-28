@@ -10,6 +10,7 @@
                     </div>
                     <!--Hero form -->
                     <livewire:form />
+                    
                  
                     <!-- Domain List -->
                     

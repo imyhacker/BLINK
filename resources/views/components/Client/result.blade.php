@@ -8,18 +8,8 @@
                         <h4>Your Link</h4>
                     </div>
                     
-                    <div class="card-bottom table-responsive">
-                        <table class="table">
-                            <thead>
-                                <tr>
-                                    <th>No</th>
-                                    <th>Your Ip</th>
-                                    <th>Original</th>
-                                    <th>Short</th>
-                                    <th>Action</th>
-                                </tr>
-                            </thead>
-                        </table>
+                    <div class="card-body table-responsive">
+                        <livewire:table />
                     </div>
                 </div>
             </div>

@@ -39,6 +39,14 @@
     <!-- Jquery Plugins, main Jquery -->	
     <script src="{{asset('assets/js/plugins.js')}}"></script>
     <script src="{{asset('assets/js/main.js')}}"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.11.4/js/jquery.dataTables.js"></script>
+    <script>
+        $(document).ready( function () {
+    $('#table_id').DataTable();
+} );
+    </script>
     @livewireScripts
+    
     </body>
 </html>
