@@ -15,7 +15,7 @@
             
             <!-- icon search -->
             <div class="search-form">
-                <button type="submit"><i class="ti-arrow-right"></i></button>
+                <button type="submit"  wire:click="$emit('postAdded')"><i class="ti-arrow-right"></i></button>
              </div>
             <!-- icon search -->
             <div class="world-form">

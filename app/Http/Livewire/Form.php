@@ -16,7 +16,8 @@ class Form extends Component
         $builder = new \AshAllenDesign\ShortURL\Classes\Builder();
 
         $shortURLObject = $builder->destinationUrl($this->url)->trackVisits()->trackIPAddress()->make();
-        session()->flash('success', 'Success! Your Link Has Been Created!');
+        $this->emit('postAdded'); 
+
     }
     public function render()
     {

@@ -1,11 +1,11 @@
 <div>
-    <table class="table" id="table_id">
+    <table class="table table-borderless table-hover">
         <thead>
             <tr>
                 <th>Original</th>
                 <th>Short</th>
                 <th>Copy</th>
-                <th>Generate QR</th>
+                <th>QR</th>
             </tr>
         </thead>
         <tbody class="text-left">
@@ -13,37 +13,16 @@
             @foreach($data as $res)
             <tr>
                 <td>{{$res->destination_url}}</td>
-                <td id="DATA">{{$res->default_short_url}}</td>
+                <td id="copy_{{$res->default_short_url}}">{{$res->default_short_url}}</td>
                 <td>
-                    <Button href="#" class="btn btn-sm btn-secondary"><i>Copy</i></Button>
+                    <button style="size: 500px; border-radius:5px; background-color: skyblue; border: none; margin-top: 2px" class="shadow-sm mt-2 mb-2 mx-2 my-2"><i class="fas fa-copy" onclick="getDocumentById(copy_{{$res->default_short_url}}.document.execCommand('copy'))" value="copy"></i></button>
                 </td>
                 <td>
-                <a href="" class="btn btn-sm btn-secondary"><i>Generate!</i></a>
-
+                <Button href="#" style="size: 500px; border-radius:5px; background-color: skyblue; border: none; margin-top: 2px" class="shadow-sm mt-2 mb-2 mx-2 my-2"><i class="fas fa-qrcode"></i></Button>
                 </td>
             </tr>
             @endforeach
         </tbody>
     </table>
-    <script>
-(function()
-{
-  let buttons = document.getElementsByTagName('Button');
-  for(let i = 0; i < buttons.length; i++)
-  {
-    let button = buttons[i];
-    button.addEventListener('click', e =>
-    {
-      let button = e.target;
-      let text = document.getElementById('DATA');
-      text.setAttribute('type', 'text');
-      text.value = email;
-      document.body.appendChild(text);
-      text.select();
-      document.execCommand('copy');
-      document.body.removeChild(text);
-    });
-  }
-})();
-</script>
+    
 </div>
