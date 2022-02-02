@@ -13,12 +13,12 @@
             @foreach($data as $res)
             <tr>
                 <td>{{$res->destination_url}}</td>
-                <td id="copy_{{$res->default_short_url}}">{{$res->default_short_url}}</td>
+                <td  data-id="short-link">{{$res->default_short_url}}</td>
                 <td>
-                    <button style="size: 500px; border-radius:5px; background-color: skyblue; border: none; margin-top: 2px" class="shadow-sm mt-2 mb-2 mx-2 my-2"><i class="fas fa-copy" onclick="getDocumentById(copy_{{$res->default_short_url}}.document.execCommand('copy'))" value="copy"></i></button>
+                    <button class="btn shadow-sm mt-2 mb-2 mx-2 my-2" data-id="button-copy"><i class="fas fa-copy"></i></button>
                 </td>
                 <td>
-                <Button href="#" style="size: 500px; border-radius:5px; background-color: skyblue; border: none; margin-top: 2px" class="shadow-sm mt-2 mb-2 mx-2 my-2"><i class="fas fa-qrcode"></i></Button>
+                <Button href="#" class="btn shadow-sm mt-2 mb-2 mx-2 my-2"><i class="fas fa-qrcode"></i></Button>
                 </td>
             </tr>
             @endforeach
