@@ -41,31 +41,63 @@
 <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.11.4/js/jquery.dataTables.js"></script>
 <script>
-     const shortlink = document.querySelectorAll('[data-id="short-link"]');
-  const buttoncopy = document.querySelectorAll('[data-id="button-copy"]')
+    const shortlink = document.querySelectorAll('[data-id="short-link"]');
+    const buttoncopy = document.querySelectorAll('[data-id="button-copy"]')
 
-  buttoncopy.forEach((el, index) => {
-    el.onclick = () => {
-      copyText(shortlink[index].innerHTML)
-      // console.log(shortlink[index])
-    }
-  })
+    buttoncopy.forEach((el, index) => {
+        el.onclick = () => {
+            copyText(shortlink[index].innerHTML)
+            // console.log(shortlink[index])
+        }
+    })
 
-  const copyText = async (text) => {
-    try {
-      navigator.clipboard.writeText(text)
-      alert("Short link has been copied")
-    } catch (e) {
-      alert("Error while copy short link")
-      console.log(e)
+    const copyText = async (text) => {
+        try {
+            navigator.clipboard.writeText(text)
+            const Toast = Swal.mixin({
+                toast: true,
+                position: 'top-end',
+                showConfirmButton: false,
+                timer: 3000,
+                timerProgressBar: true,
+                didOpen: (toast) => {
+                    toast.addEventListener('mouseenter', Swal.stopTimer)
+                    toast.addEventListener('mouseleave', Swal.resumeTimer)
+                }
+            })
+
+            Toast.fire({
+                icon: 'success',
+                title: 'Success Copied'
+            })
+        } catch (e) {
+          const Toast = Swal.mixin({
+                toast: true,
+                position: 'top-end',
+                showConfirmButton: false,
+                timer: 3000,
+                timerProgressBar: true,
+                didOpen: (toast) => {
+                    toast.addEventListener('mouseenter', Swal.stopTimer)
+                    toast.addEventListener('mouseleave', Swal.resumeTimer)
+                }
+            })
+
+            Toast.fire({
+                icon: 'error',
+                title: 'Error....'
+            })  
+
+            console.log(e)
+        }
     }
-  }
-  </script>
+
+</script>
 <script>
     $(document).ready(function () {
         $('#table_id').DataTable();
     });
-   
+
 </script>
 @livewireScripts
 </body>

@@ -11,7 +11,6 @@
         <x-Client.features />
         </div>
         <x-Client.faq />
-        <x-Client.ready />
         <x-Client.help />
     </main>
     <x-Client.footer />

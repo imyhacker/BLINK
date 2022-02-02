@@ -18,7 +18,7 @@
                     <button class="btn shadow-sm mt-2 mb-2 mx-2 my-2" data-id="button-copy"><i class="fas fa-copy"></i></button>
                 </td>
                 <td>
-                <Button href="#" class="btn shadow-sm mt-2 mb-2 mx-2 my-2"><i class="fas fa-qrcode"></i></Button>
+                <Button wire:click="tes({{$res->id}})" class="btn shadow-sm mt-2 mb-2 mx-2 my-2"><i class="fas fa-qrcode"></i></Button>
                 </td>
             </tr>
             @endforeach
